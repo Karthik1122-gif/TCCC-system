@@ -166,16 +166,16 @@ const Login = () => {
                   </svg>
                   Email Address
                 </label>
-                <div className="relative">
-                  <div className="absolute right-4 top-1/2 -translate-y-1/2 text-blue-400">
+                <div className="relative" style={{ position: 'relative', width: '100%' }}>
+                  <div style={{ position: 'absolute', right: '16px', top: '50%', transform: 'translateY(-50%)', display: 'flex', alignItems: 'center', pointerEvents: 'none', color: '#60a5fa' }}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                     </svg>
                   </div>
                   <input
                     type="email"
-                    className="input-classic pr-12 pl-4"
-                    style={{ paddingLeft: '1rem', paddingRight: '3rem' }}
+                    className="input-classic"
+                    style={{ paddingLeft: '16px', paddingRight: '48px', width: '100%', boxSizing: 'border-box' }}
                     placeholder={role === 'driver' ? 'driver@ambulance.com' : 'officer@police.gov.in'}
                     value={email}
                     onChange={e => setEmail(e.target.value)}
@@ -191,16 +191,16 @@ const Login = () => {
                   </svg>
                   Password
                 </label>
-                <div className="relative">
-                  <div className="absolute right-4 top-1/2 -translate-y-1/2 text-blue-400">
+                <div className="relative" style={{ position: 'relative', width: '100%' }}>
+                  <div style={{ position: 'absolute', right: '16px', top: '50%', transform: 'translateY(-50%)', display: 'flex', alignItems: 'center', pointerEvents: 'none', color: '#60a5fa' }}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
                     </svg>
                   </div>
                   <input
                     type="password"
-                    className="input-classic pr-12 pl-4"
-                    style={{ paddingLeft: '1rem', paddingRight: '3rem' }}
+                    className="input-classic"
+                    style={{ paddingLeft: '16px', paddingRight: '48px', width: '100%', boxSizing: 'border-box' }}
                     placeholder="••••••••"
                     value={password}
                     onChange={e => setPassword(e.target.value)}
