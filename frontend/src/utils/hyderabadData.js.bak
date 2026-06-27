@@ -1,0 +1,73 @@
+// Import comprehensive traffic signals from separate file
+import { HYDERABAD_SIGNALS } from './hyderabadSignals.js';
+
+export { HYDERABAD_SIGNALS };
+
+// Mock Hyderabad Hospitals with GPS coordinates (Expanded List - 25+ hospitals)
+export const HYDERABAD_HOSPITALS = [
+  // Major Multi-Specialty Hospitals
+  { id: 'h1', name: 'Apollo Hospital', area: 'Jubilee Hills', lat: 17.4218, lng: 78.4071, type: 'Multi-Specialty', beds: 450, phone: '040-23607777', rating: 4.8 },
+  { id: 'h2', name: 'Yashoda Hospital', area: 'Somajiguda', lat: 17.4267, lng: 78.4563, type: 'Multi-Specialty', beds: 320, phone: '040-45674567', rating: 4.7 },
+  { id: 'h3', name: 'Care Hospital', area: 'Banjara Hills', lat: 17.4100, lng: 78.4483, type: 'Cardiac Center', beds: 200, phone: '040-30418000', rating: 4.6 },
+  { id: 'h4', name: 'NIMS', area: 'Punjagutta', lat: 17.4319, lng: 78.4500, type: 'Government', beds: 800, phone: '040-23320001', rating: 4.5 },
+  { id: 'h5', name: 'Kamineni Hospital', area: 'LB Nagar', lat: 17.3421, lng: 78.5472, type: 'Multi-Specialty', beds: 300, phone: '040-66666666', rating: 4.4 },
+  { id: 'h6', name: 'Omni Hospital', area: 'Gachibowli', lat: 17.4400, lng: 78.3489, type: 'Trauma Center', beds: 250, phone: '040-44343434', rating: 4.5 },
+  { id: 'h7', name: 'MaxCure Hospital', area: 'Madhapur', lat: 17.4511, lng: 78.3822, type: 'Neuro Specialty', beds: 180, phone: '040-44552211', rating: 4.3 },
+  { id: 'h8', name: 'Sunshine Hospital', area: 'Secunderabad', lat: 17.4436, lng: 78.4993, type: 'Gynecology', beds: 220, phone: '040-40454545', rating: 4.2 },
+  
+  // Additional Major Hospitals
+  { id: 'h9', name: 'Continental Hospitals', area: 'Gachibowli', lat: 17.4425, lng: 78.3442, type: 'Multi-Specialty', beds: 750, phone: '040-67676767', rating: 4.7 },
+  { id: 'h10', name: 'Rainbow Children Hospital', area: 'Banjara Hills', lat: 17.4156, lng: 78.4410, type: 'Pediatric', beds: 200, phone: '040-35002222', rating: 4.8 },
+  { id: 'h11', name: 'Asian Institute of Gastroenterology', area: 'Gachibowli', lat: 17.4389, lng: 78.3752, type: 'Gastro Specialty', beds: 150, phone: '040-23378888', rating: 4.6 },
+  { id: 'h12', name: 'Star Hospital', area: 'Banjara Hills', lat: 17.4185, lng: 78.4426, type: 'Multi-Specialty', beds: 300, phone: '040-44777000', rating: 4.5 },
+  { id: 'h13', name: 'Gandhi Hospital', area: 'Musheerabad', lat: 17.4431, lng: 78.4818, type: 'Government', beds: 1000, phone: '040-27560131', rating: 4.2 },
+  { id: 'h14', name: 'Aware Gleneagles Global Hospital', area: 'LB Nagar', lat: 17.3456, lng: 78.5521, type: 'Multi-Specialty', beds: 450, phone: '040-67064444', rating: 4.6 },
+  { id: 'h15', name: 'KIMS Hospital', area: 'Kondapur', lat: 17.4650, lng: 78.3648, type: 'Multi-Specialty', beds: 300, phone: '040-44885000', rating: 4.5 },
+  
+  // Newer Additions
+  { id: 'h16', name: 'Apollo Cradle', area: 'Jubilee Hills', lat: 17.4299, lng: 78.4085, type: 'Maternity', beds: 100, phone: '040-23558888', rating: 4.4 },
+  { id: 'h17', name: 'Medicover Hospital', area: 'Madhapur', lat: 17.4488, lng: 78.3899, type: 'Multi-Specialty', beds: 200, phone: '040-68334455', rating: 4.3 },
+  { id: 'h18', name: 'Citizens Hospital', area: 'Nallagandla', lat: 17.4755, lng: 78.3593, type: 'Multi-Specialty', beds: 150, phone: '040-67166666', rating: 4.2 },
+  { id: 'h19', name: 'Fernandez Hospital', area: 'Hyderguda', lat: 17.3972, lng: 78.4684, type: 'Maternity', beds: 120, phone: '040-24759999', rating: 4.7 },
+  { id: 'h20', name: 'Apollo Spectra', area: 'Kondapur', lat: 17.4611, lng: 78.3711, type: 'Surgery Center', beds: 80, phone: '040-49670000', rating: 4.4 },
+  
+  // Eastern & Southern Areas
+  { id: 'h21', name: 'Prasad Hospital', area: 'Nacharam', lat: 17.4342, lng: 78.5469, type: 'Multi-Specialty', beds: 150, phone: '040-27177777', rating: 4.1 },
+  { id: 'h22', name: 'Global Hospital', area: 'Lakdi Ka Pul', lat: 17.3997, lng: 78.4536, type: 'Liver Specialty', beds: 200, phone: '040-23607777', rating: 4.6 },
+  { id: 'h23', name: 'Virinchi Hospital', area: 'Banjara Hills', lat: 17.4143, lng: 78.4373, type: 'Multi-Specialty', beds: 250, phone: '040-23559999', rating: 4.5 },
+  { id: 'h24', name: 'AIG Hospital', area: 'Gachibowli', lat: 17.4483, lng: 78.3514, type: 'Multi-Specialty', beds: 300, phone: '040-42224444', rating: 4.7 },
+  { id: 'h25', name: 'PACE Hospital', area: 'HITECH City', lat: 17.4509, lng: 78.3819, type: 'Cardiac', beds: 180, phone: '040-44885000', rating: 4.4 },
+  
+  // Additional Nearby Hospitals
+  { id: 'h26', name: 'Apollo Hospital', area: 'Hyderguda', lat: 17.3981, lng: 78.4712, type: 'Multi-Specialty', beds: 300, phone: '040-66775555', rating: 4.6 },
+  { id: 'h27', name: 'Care Hospital', area: 'HITECH City', lat: 17.4502, lng: 78.3735, type: 'Multi-Specialty', beds: 220, phone: '040-61651000', rating: 4.5 },
+  { id: 'h28', name: 'Osmania General Hospital', area: 'Afzal Gunj', lat: 17.3732, lng: 78.4873, type: 'Government', beds: 1200, phone: '040-24600146', rating: 4.1 },
+];
+
+// Hyderabad traffic signal junctions (major real intersections, coordinates are approximate map positions)
+export const HYDERABAD_SIGNALS = [
+  { id: 's1', junctionName: 'Panjagutta Junction', location: { lat: 17.4319, lng: 78.4494 }, currentState: 'red', redTime: 62, yellowTime: 4, greenTime: 86, cycleTime: 152 },
+  { id: 's2', junctionName: 'Ameerpet Junction', location: { lat: 17.4374, lng: 78.4482 }, currentState: 'green', redTime: 58, yellowTime: 4, greenTime: 78, cycleTime: 140 },
+  { id: 's3', junctionName: 'Begumpet Greenlands Signal', location: { lat: 17.4438, lng: 78.4625 }, currentState: 'yellow', redTime: 48, yellowTime: 5, greenTime: 72, cycleTime: 125 },
+  { id: 's4', junctionName: 'Paradise Circle', location: { lat: 17.4419, lng: 78.4862 }, currentState: 'red', redTime: 60, yellowTime: 4, greenTime: 82, cycleTime: 146 },
+  { id: 's5', junctionName: 'Secunderabad Clock Tower Junction', location: { lat: 17.4399, lng: 78.4983 }, currentState: 'green', redTime: 54, yellowTime: 4, greenTime: 70, cycleTime: 128 },
+  { id: 's6', junctionName: 'Nampally Junction', location: { lat: 17.3897, lng: 78.4765 }, currentState: 'red', redTime: 66, yellowTime: 5, greenTime: 84, cycleTime: 155 },
+  { id: 's7', junctionName: 'Abids GPO Junction', location: { lat: 17.3927, lng: 78.4767 }, currentState: 'yellow', redTime: 50, yellowTime: 5, greenTime: 68, cycleTime: 123 },
+  { id: 's8', junctionName: 'Koti Women’s College Junction', location: { lat: 17.3868, lng: 78.4868 }, currentState: 'green', redTime: 52, yellowTime: 4, greenTime: 74, cycleTime: 130 },
+  { id: 's9', junctionName: 'Lakdi Ka Pul Junction', location: { lat: 17.4016, lng: 78.4562 }, currentState: 'red', redTime: 57, yellowTime: 4, greenTime: 79, cycleTime: 140 },
+  { id: 's10', junctionName: 'Masab Tank Junction', location: { lat: 17.4029, lng: 78.4521 }, currentState: 'green', redTime: 55, yellowTime: 4, greenTime: 75, cycleTime: 134 },
+  { id: 's11', junctionName: 'Mehdipatnam Junction', location: { lat: 17.3998, lng: 78.4358 }, currentState: 'red', redTime: 68, yellowTime: 5, greenTime: 90, cycleTime: 163 },
+  { id: 's12', junctionName: 'Tolichowki Junction', location: { lat: 17.4128, lng: 78.4002 }, currentState: 'yellow', redTime: 61, yellowTime: 5, greenTime: 82, cycleTime: 148 },
+  { id: 's13', junctionName: 'Jubilee Hills Check Post', location: { lat: 17.4281, lng: 78.4124 }, currentState: 'green', redTime: 47, yellowTime: 3, greenTime: 73, cycleTime: 123 },
+  { id: 's14', junctionName: 'Road No. 36 Junction', location: { lat: 17.4324, lng: 78.4077 }, currentState: 'red', redTime: 49, yellowTime: 4, greenTime: 71, cycleTime: 124 },
+  { id: 's15', junctionName: 'Madhapur Image Hospital Junction', location: { lat: 17.4484, lng: 78.3821 }, currentState: 'yellow', redTime: 56, yellowTime: 4, greenTime: 69, cycleTime: 129 },
+  { id: 's16', junctionName: 'Cyber Towers Junction', location: { lat: 17.4435, lng: 78.3772 }, currentState: 'green', redTime: 43, yellowTime: 3, greenTime: 63, cycleTime: 109 },
+  { id: 's17', junctionName: 'HITEC City MMTS Junction', location: { lat: 17.4479, lng: 78.3774 }, currentState: 'red', redTime: 46, yellowTime: 4, greenTime: 66, cycleTime: 116 },
+  { id: 's18', junctionName: 'Raidurgam Bio-Diversity Junction', location: { lat: 17.4275, lng: 78.3719 }, currentState: 'green', redTime: 60, yellowTime: 4, greenTime: 88, cycleTime: 152 },
+  { id: 's19', junctionName: 'Gachibowli Junction', location: { lat: 17.4405, lng: 78.3478 }, currentState: 'red', redTime: 63, yellowTime: 4, greenTime: 92, cycleTime: 159 },
+  { id: 's20', junctionName: 'Kondapur RTO Junction', location: { lat: 17.4674, lng: 78.3639 }, currentState: 'yellow', redTime: 52, yellowTime: 5, greenTime: 70, cycleTime: 127 },
+  { id: 's21', junctionName: 'Miyapur X Roads', location: { lat: 17.4948, lng: 78.3919 }, currentState: 'green', redTime: 58, yellowTime: 4, greenTime: 80, cycleTime: 142 },
+  { id: 's22', junctionName: 'KPHB JNTU Junction', location: { lat: 17.4959, lng: 78.3915 }, currentState: 'red', redTime: 57, yellowTime: 4, greenTime: 77, cycleTime: 138 },
+  { id: 's23', junctionName: 'Dilsukhnagar Chaitanyapuri Junction', location: { lat: 17.3688, lng: 78.5244 }, currentState: 'yellow', redTime: 65, yellowTime: 5, greenTime: 82, cycleTime: 152 },
+  { id: 's24', junctionName: 'LB Nagar Junction', location: { lat: 17.3491, lng: 78.5526 }, currentState: 'green', redTime: 64, yellowTime: 5, greenTime: 86, cycleTime: 155 },
+];

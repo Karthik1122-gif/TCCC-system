@@ -1,0 +1,275 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0f172a;
+  --navy-light: #60a5fa;
+  --navy-mid: #7dd3fc;
+  --gold: #60a5fa;
+  --gold-light: #eff6ff;
+  --gold-dark: #2563eb;
+  --cream: #ffffff;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: radial-gradient(circle at 15% 20%, rgba(125, 211, 252, 0.42), transparent 30%),
+              radial-gradient(circle at 85% 10%, rgba(147, 197, 253, 0.36), transparent 32%),
+              linear-gradient(145deg, #1e40af 0%, #60a5fa 55%, #bae6fd 100%);
+  color: var(--white);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    -35deg,
+    rgba(255, 255, 255, 0.04) 0,
+    rgba(255, 255, 255, 0.04) 12px,
+    transparent 12px,
+    transparent 28px
+  );
+  z-index: -1;
+}
+
+/* Gold Gradient Text utility */
+.text-gold-gradient {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass Card */
+.glass-card {
+  background: linear-gradient(160deg, rgba(15, 23, 42, 0.68), rgba(59, 130, 246, 0.3));
+  border: 1px solid rgba(191, 219, 254, 0.48);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+}
+
+/* Animated Glow Button */
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: var(--white);
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(219, 234, 254, 0.45);
+  box-shadow: 0 8px 24px rgba(30, 64, 175, 0.45);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(30, 64, 175, 0.6);
+}
+
+.btn-navy {
+  background: linear-gradient(135deg, #60a5fa, #2563eb);
+  color: var(--white);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  transition: all 0.3s ease;
+}
+.btn-navy:hover {
+  border-color: #60a5fa;
+  box-shadow: 0 4px 16px rgba(96, 165, 250, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Smooth input styles */
+.input-classic {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(96, 165, 250, 0.32);
+  color: white;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 100%;
+  outline: none;
+}
+
+/* Pulsing animation for ambulance location marker */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.15);
+  }
+}
+
+.pulse-circle {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Enhanced ambulance marker with glow */
+.ambulance-marker {
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.8));
+  animation: gentle-pulse 2s ease-in-out infinite;
+}
+
+@keyframes gentle-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.8));
+  }
+  50% {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 12px rgba(59, 130, 246, 1));
+  }
+}
+
+/* Ambulance location label styling */
+.ambulance-location-label {
+  background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+  border: 2px solid white !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 20px rgba(59, 130, 246, 0.6) !important;
+  padding: 6px 12px !important;
+  font-weight: bold !important;
+  color: white !important;
+  animation: label-pulse 2s ease-in-out infinite;
+}
+
+.ambulance-location-label::before {
+  border-top-color: #2563eb !important;
+}
+
+@keyframes label-pulse {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 20px rgba(59, 130, 246, 0.6);
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 30px rgba(59, 130, 246, 0.9);
+  }
+}
+
+/* Input focus and placeholder styles */
+.input-classic:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.25);
+}
+.input-classic::placeholder {
+  color: rgba(147, 197, 253, 0.5);
+}
+
+/* Fade in animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes pulsate {
+  0%, 100% { box-shadow: 0 0 8px rgba(96,165,250,0.45); }
+  50% { box-shadow: 0 0 20px rgba(96,165,250,0.9), 0 0 40px rgba(96,165,250,0.45); }
+}
+@keyframes ping-slow {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* Traffic Signal Animations */
+@keyframes traffic-signal-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px currentColor);
+  }
+  50% {
+    filter: drop-shadow(0 0 12px currentColor) drop-shadow(0 0 20px currentColor);
+  }
+}
+
+@keyframes traffic-pole-hover {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-2px) scale(1.05);
+  }
+}
+
+.traffic-signal-icon {
+  animation: traffic-signal-glow 2s ease-in-out infinite;
+  transition: transform 0.2s ease;
+}
+
+.traffic-signal-icon:hover {
+  transform: scale(1.15) !important;
+  animation: traffic-pole-hover 0.5s ease-in-out infinite;
+}
+
+.traffic-pole-icon {
+  transition: all 0.2s ease;
+  opacity: 0.85;
+}
+
+.traffic-pole-icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.animate-fade-in-up  { animation: fadeInUp 0.5s ease-out both; }
+.animate-fade-in     { animation: fadeIn 0.4s ease-out both; }
+.animate-pulsate     { animation: pulsate 2s ease-in-out infinite; }
+
+/* Delay utilities */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Nav bar */
+.nav-page {
+  background: rgba(30, 58, 138, 0.58);
+  border-bottom: 1px solid rgba(96, 165, 250, 0.28);
+  backdrop-filter: blur(10px);
+}
+
+/* Leaflet custom popup override */
+.leaflet-popup-content-wrapper {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.leaflet-popup-content {
+  margin: 0 !important;
+}
+.leaflet-popup-tip-container {
+  display: none;
+}
+
+/* Sidebar scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(96, 165, 250, 0.45); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+
+
+
